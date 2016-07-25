@@ -1,0 +1,391 @@
+@import url(https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/3.2.0/sanitize.min.css);
+@import url(https://fonts.googleapis.com/css?family=Raleway:100,400,700);
+@import url(//fonts.googleapis.com/earlyaccess/notosansjapanese.css);
+html {
+    overflow-x: hidden;
+    font-size: 50%!important;
+}
+
+html * {
+    font-family: "Noto Sans Japanese";
+    font-weight: 100;
+}
+
+ul {
+    list-style-type: none;
+}
+
+img.src2bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat!important;
+    background-size: cover!important;
+}
+
+.fill_link {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+
+*>a:not(.fill_link) {
+    font-family: inherit;
+    position: relative;
+    color: inherit;
+}
+
+*>a:not(.fill_link):after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 0;
+    height: 100%;
+    border-bottom: 1px black solid;
+    transition: .125s width;
+}
+
+*>a:not(.fill_link):hover:after {
+    width: 100%;
+}
+
+#bg {
+    z-index: -1;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+#opening {
+    width: 100vw;
+    height: 100vh;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -ms-flex-align: center;
+    align-items: center;
+    position: relative;
+}
+
+#opening>img {
+    height: 20rem;
+}
+
+#opening>h1 {
+    font-size: 5rem;
+    letter-spacing: 0.05em;
+    font-family: "raleway";
+}
+
+#menu {
+    width: 100%;
+    position: static;
+}
+
+#menu.sticky {
+    position: fixed;
+    top: 0;
+    z-index: 9999;
+}
+
+#menu>ul {
+    width: 100%;
+    height: 100%;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+    -ms-flex-pack: center;
+    justify-content: center;
+    z-index: 0;
+}
+
+#menu li {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    text-align: center;
+    background-color: white;
+    transition: .25s background;
+}
+
+#menu li:hover {
+    background: hsl(0, 0%, 75%);
+}
+
+#menu a {
+    z-index: 100;
+}
+
+#menu h1 {
+    font-family: "raleway";
+    font-size: 2rem;
+    letter-spacing: 1px;
+    color: black;
+    padding-top: 1.25em;
+    padding-bottom: 0.25em;
+    margin-bottom: 1em;
+}
+
+#menu>ul>li:hover>h1:after {
+    width: 80%;
+}
+
+#menu>ul ul {
+    position: absolute;
+    width: 112.5%;
+    z-index: 0;
+    visibility: hidden;
+    z-index: 1;
+    perspective: 400px;
+    opacity: calc(1/3);
+    transition: .75s opacity;
+    margin-left: 5%;
+}
+
+#menu li li {
+    transform: rotateY(90deg);
+    transform-origin: left;
+    transition: 0.145s transform, .125s background;
+    background-color: white;
+    text-align: left;
+}
+
+#menu li:hover ul {
+    visibility: visible;
+    opacity: 0.9;
+}
+
+#menu li:hover li {
+    transform: rotateY(0);
+}
+
+#menu li li h1 {
+    padding-left: 12.5%;
+}
+
+header,
+section {
+    background: white;
+    padding-top: 5vh;
+    padding-bottom: 5vh;
+}
+
+header,
+footer {
+    padding-left: 10vw;
+    padding-right: 10vw;
+}
+
+header>h1,
+section>h1 {
+    font-size: 7.5rem;
+    font-family: "raleway";
+}
+
+header>h2,
+section>h2 {
+    font-size: 3rem;
+    font-family: "raleway";
+}
+
+header>p,
+section>p {
+    font-size: 2.5rem;
+    font-family: "noto sans japanese";
+}
+
+header>div,
+section>div {
+    padding-left: 5vw;
+}
+
+header>div>h1,
+section>div>h1 {
+    font-size: 5rem;
+    font-family: "raleway";
+}
+
+header>div>h2,
+section>div>h2 {
+    font-size: 3rem;
+    letter-spacing: 1px;
+}
+
+header>div>p,
+section>div>p {
+    font-size: 2.125rem;
+}
+
+section {
+    min-height: 40vh;
+    background-color: transparent;
+}
+
+section>h1 {
+    padding-left: 10vw;
+}
+
+section>h2 {
+    padding-left: 10vw;
+}
+
+footer {
+    padding-top: 5vh;
+    padding-bottom: 2.5vh;
+    background: white;
+    width: 100%;
+    position: relative;
+}
+
+footer.fix {
+    position: fixed;
+    bottom: 0;
+}
+
+footer>h1 {
+    font-size: 3rem;
+    font-family: "raleway";
+}
+
+footer>h2 {
+    font-size: 2.125rem;
+    font-family: "raleway";
+}
+
+.list_sect>ul {
+    margin: 0 5vw;
+    background: rgba(255, 255, 255, 0.5);
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+}
+
+.list_sect>ul li {
+    width: calc(100%/5);
+    position: relative;
+    cursor: pointer;
+    perspective: 400px;
+}
+
+.list_sect>ul li>img {
+    width: 100%;
+    -webkit-filter: grayscale(75%);
+    filter: grayscale(75%);
+    backface-visibility: visible;
+    transform: rotateY(0deg);
+    transform-style: preserve-3d;
+    transition: .275s transform;
+    backface-visibility: hidden;
+}
+
+.list_sect>ul li:hover>img {
+    transform: rotateY(180deg);
+}
+
+.list_sect>ul li>div {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -ms-flex-align: center;
+    align-items: center;
+    backface-visibility: hidden;
+    transform: rotateY(-180deg);
+    transform-style: preserve-3d;
+    transition: .275s transform;
+    backface-visibility: hidden;
+    text-align: center;
+}
+
+.list_sect>ul li:hover>div {
+    transform: rotateY(0deg);
+}
+
+.list_sect>ul li:nth-child(5n+1)>div {
+    background: hsl(30, 75%, 42.5%);
+}
+
+.list_sect>ul li:nth-child(5n+2)>div {
+    background: hsl(102, 75%, 42.5%);
+}
+
+.list_sect>ul li:nth-child(5n+3)>div {
+    background: hsl(174, 75%, 42.5%);
+}
+
+.list_sect>ul li:nth-child(5n+4)>div {
+    background: hsl(246, 75%, 42.5%);
+}
+
+.list_sect>ul li:nth-child(5n+5)>div {
+    background: hsl(318, 75%, 42.5%);
+}
+
+.list_sect>ul li>div>h1 {
+    font-family: "raleway", "noto sans japanese";
+    font-size: 2.125rem;
+    font-weight: 100;
+    color: white;
+    margin-bottom: 0.5em;
+}
+
+.list_sect>ul li>div>h2 {
+    font-family: "raleway", "noto sans japanese";
+    font-size: 1rem;
+    color: white;
+    letter-spacing: 1px;
+    margin-bottom: 0.25em;
+}
+
+@media screen and (min-width: 1200px) {
+    .list_sect>ul li {
+        width: calc(100%/8);
+    }
+    .list_sect>ul li:nth-child(8n+1)>div {
+        background: hsl(22, 75%, 42.5%);
+    }
+    .list_sect>ul li:nth-child(8n+2)>div {
+        background: hsl(67, 75%, 42.5%);
+    }
+    .list_sect>ul li:nth-child(8n+3)>div {
+        background: hsl(112, 75%, 42.5%);
+    }
+    .list_sect>ul li:nth-child(8n+4)>div {
+        background: hsl(157, 75%, 42.5%);
+    }
+    .list_sect>ul li:nth-child(8n+5)>div {
+        background: hsl(202, 75%, 42.5%);
+    }
+    .list_sect>ul li:nth-child(8n+6)>div {
+        background: hsl(247, 75%, 42.5%);
+    }
+    .list_sect>ul li:nth-child(8n+7)>div {
+        background: hsl(292, 75%, 42.5%);
+    }
+    .list_sect>ul li:nth-child(8n)>div {
+        background: hsl(337, 75%, 42.5%);
+    }
+}

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Millennium Records</title>
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script src="/assets/scripts/src2bg.js"></script>
+    <script src="/assets/scripts/jcanvas.min.js"></script>
+    <script src="https://d3js.org/d3.v4.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/trianglify/0.4.0/trianglify.min.js"></script>
+    <script src="https://d3js.org/d3.v4.min.js"></script>
+    <script src="/assets/scripts/footer.js"></script>
+    <script src="/assets/scripts/menu.js"></script>
+    <script src="/assets/scripts/bg.js"></script>
+</head>
+
+<body>
+    <nav id="menu"></nav>
+    <section id="albums" class="list_sect">
+        <h1>ALBUMS</h1>
+        <ul></ul>
+        <script>
+            $(function () {
+                $.getJSON("/albums/albums.json", function (json) {
+                    var $list = $("#albums>ul");
+                    for (var i = 0; i < json.length; i++) {
+                        var album = json[json.length - 1 - i];
+                        var name = album.name
+                            , src = "/assets/images/albums/" + album.src + ".jpg"
+                            , link = "/albums/" + album.href + "/index.html";
+                        var $container = $("<li>");
+                        var $img = $("<img>", {
+                                src: src
+                            })
+                            , $flip = $("<div>")
+                            , $name = $("<h1>", {
+                                text: name
+                            })
+                            , $artist = $("<h2>", {
+                                text: album.artist
+                            })
+                            , $genre = $("<h2>", {
+                                text: album.genre
+                            })
+                            , $link = $("<a>", {
+                                href: link
+                                , class: "fill_link"
+                            });
+                        $container.append($img, $flip.append($name, $artist, $genre), $link);
+                        $list.append($container);
+                    };
+                });
+            });
+        </script>
+    </section>
+    <footer></footer>
+</body>
+
+</html>
