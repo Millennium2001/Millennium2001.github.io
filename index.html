@@ -19,7 +19,7 @@
 </head>
 
 <body>
-  <div id="opening"> <img src="/assets/images/logo.png">
+  <div id="opening"> <img src="./assets/images/logo.png">
     <h1>Millennium Records</h1> </div>
   <nav id="menu"></nav>
   <header>
@@ -38,12 +38,12 @@
     <ul></ul>
     <script>
       $(function () {
-        $.getJSON("/members/members.json", function (json) {
+        $.getJSON("./members/members.json", function (json) {
           var $list = $("#members>ul");
           $.each(json, function (i, member) {
             var name = member.name
-              , src = "/assets/images/members/" + member.path + ".jpg"
-              , link = "/members/" + member.path + "/index.html";
+              , src = "./assets/images/members/" + member.path + ".jpg"
+              , link = "./members/" + member.path + "/index.html";
             var $container = $("<li>");
             var $img = $("<img>", {
                 src: src
@@ -67,7 +67,7 @@
     <h1>RECENTLY ALBUMS</h1>
     <div>
       <h2>最新のアルバム</h2>
-      <p>全アルバムは <a href="/albums/index.html">こちら</a>へどうぞ。</p>
+      <p>全アルバムは <a href="./albums/index.html">こちら</a>へどうぞ。</p>
     </div>
     <ul></ul>
     <script>
@@ -77,8 +77,8 @@
           for (var i = 0; i < Math.min(json.length, 8); i++) {
             var album = json[json.length - 1 - i];
             var name = album.name
-              , src = "/assets/images/albums/" + album.src + ".jpg"
-              , link = "/albums/" + album.href + "/index.html";
+              , src = "./assets/images/albums/" + album.src + ".jpg"
+              , link = "./albums/" + album.href + "/index.html";
             var $container = $("<li>");
             var $img = $("<img>", {
                 src: src

@@ -33,7 +33,7 @@
           for (var i = 0; i < json.length; i++) {
             var album = json[json.length - 1 - i];
             var name = album.name;
-            var src = "//cdn.rawgit.com/SnO2WMaN/MillenniumRecords-Website/master/assets/images/albums/" + album.src + ".jpg";
+            var src = "../assets/images/albums/" + album.src + ".jpg";
             var link = "./" + album.href + "/index.html";
             var $container = $("<li>");
             var $img = $("<img>", {
