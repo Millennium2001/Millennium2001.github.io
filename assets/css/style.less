@@ -1,0 +1,422 @@
+@import "https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/3.2.0/sanitize.min.css";
+@import "https://fonts.googleapis.com/css?family=Raleway:100,400,700";
+@import "//fonts.googleapis.com/earlyaccess/notosansjapanese.css";
+.fill {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.v_centering (@justify: center, @align: center) {
+  display: flex;
+  flex-direction: row;
+  justify-content: @justify;
+  align-items: @align;
+}
+
+.h_centering (@justify: center, @align: center) {
+  display: flex;
+  flex-direction: column;
+  justify-content: @justify;
+  align-items: @align;
+}
+
+html {
+  font-size: 50% !important;
+}
+
+* {
+  font-family: "noto sans japanese";
+  font-weight: 100;
+}
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  &:not(.fill_link) {
+    font-family: inherit;
+    position: relative;
+    color: inherit;
+    &:after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      margin: auto;
+      width: 0;
+      height: 100%;
+      border-bottom: 1px black solid;
+      transition: .125s width;
+    }
+    &:hover {
+      &:after {
+        width: 100%;
+      }
+    }
+  }
+}
+
+img.src2bg {
+  background-repeat: no-repeat !important;
+  background-size: cover !important;
+}
+
+.fill_link {
+  .fill;
+}
+
+#bg {
+  z-index: -1;
+  .fill;
+  position: fixed;
+}
+
+#opening {
+  width: 100%;
+  height: 100vh;
+  .h_centering;
+  position: relative;
+  &>img {
+    height: 20rem;
+  }
+  &>h1 {
+    font-size: 5rem;
+    letter-spacing: 0.05em;
+    font-family: "raleway";
+  }
+}
+
+#menu {
+  width: 100%;
+  position: static;
+  &>ul {
+    width: 100%;
+    height: 100%;
+    .v_centering;
+    z-index: 0;
+    &>li {
+      &:hover {
+        &>h1 {
+          &:after {
+            width: 80%;
+          }
+        }
+      }
+    }
+    ul {
+      position: absolute;
+      width: 100%;
+      visibility: hidden;
+      z-index: 1;
+      perspective: 400px;
+      opacity: calc(1/3);
+      transition: .75s opacity;
+      margin-left: 5%;
+    }
+  }
+  li {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    text-align: center;
+    background-color: white;
+    transition: .25s background;
+    &:hover {
+      background: hsl(0, 0%, 75%);
+      ul {
+        visibility: visible;
+        opacity: 0.9;
+      }
+      li {
+        transform: rotateY(0);
+      }
+    }
+    li {
+      transform: rotateY(90deg);
+      transform-origin: left;
+      transition: 0.145s transform, .125s background;
+      background-color: white;
+      text-align: left;
+      h1 {
+        padding-left: 12.5%;
+      }
+    }
+  }
+  a {
+    z-index: 100;
+  }
+  h1 {
+    font-family: "raleway";
+    font-size: 2rem;
+    letter-spacing: 1px;
+    color: black;
+    padding-top: 1.25em;
+    padding-bottom: 0.25em;
+    margin-bottom: 1em;
+  }
+  &.sticky {
+    position: fixed;
+    top: 0;
+    z-index: 9999;
+  }
+}
+
+header,
+section {
+  width: 100%;
+  min-height: 50vh;
+  background: white;
+  padding-top: 5vh;
+  padding-bottom: 5vh;
+  padding-left: 10%;
+  padding-right: 10%;
+  .h_centering(center, flex-start);
+  &>h1 {
+    font-size: 7.5rem;
+    font-family: "raleway";
+  }
+  &>h2 {
+    font-size: 3rem;
+    font-family: "raleway";
+  }
+  &>p {
+    font-size: 2.5rem;
+    font-family: "noto sans japenese";
+  }
+  div {
+    padding-left: 5%;
+    margin: 1vh 0;
+    &>h1 {
+      font-size: 5rem;
+      font-family: "raleway";
+    }
+    &>h2 {
+      font-size: 3rem;
+      letter-spacing: 2px;
+    }
+    &>p {
+      font-size: 2rem;
+      letter-spacing: 1px;
+    }
+  }
+  .v_centering {
+    .v_centering;
+    width: 100%;
+    padding: 0;
+    &>div {
+      padding: 0;
+      &.texts {
+        width: 100&;
+        flex-grow: 2;
+        padding-right: 1em;
+      }
+      &>img {
+        height: 25rem;
+      }
+    }
+  }
+}
+
+section {
+  background-color: transparent;
+  padding-left: 5%;
+  padding-right: 5%;
+}
+
+footer {
+  padding-left: 10%;
+  padding-right: 10%;
+  padding-top: 5vh;
+  padding-bottom: 2.5vh;
+  background: white;
+  width: 100%;
+  position: relative;
+  &>h1 {
+    font-size: 3rem;
+    font-family: "raleway";
+  }
+  &>h2 {
+    font-size: 2.125rem;
+    font-family: "raleway";
+  }
+  &.fix {
+    position: fixed;
+    bottom: 0;
+  }
+}
+
+.list_sect {
+  &>ul {
+    width: 90%;
+    margin: auto;
+    background: rgba(255, 255, 255, 0.5);
+    .v_centering(flex-start, center);
+    flex-wrap: wrap;
+    li {
+      width: calc(100%/5);
+      position: relative;
+      cursor: pointer;
+      perspective: 400px;
+      &>img {
+        width: 100%;
+        -webkit-filter: grayscale(75%);
+        filter: grayscale(75%);
+        backface-visibility: visible;
+        transform: rotateY(0deg);
+        transform-style: preserve-3d;
+        transition: .275s transform;
+        backface-visibility: hidden;
+      }
+      &:hover {
+        &>img {
+          transform: rotateY(180deg);
+        }
+        &>div {
+          transform: rotateY(0deg);
+        }
+      }
+      &>div {
+        .fill;
+        .h_centering;
+        backface-visibility: hidden;
+        transform: rotateY(-180deg);
+        transform-style: preserve-3d;
+        transition: .275s transform;
+        backface-visibility: hidden;
+        padding: 0;
+        margin: 0;
+        &>h1 {
+          font-family: "raleway", "noto sans japanese";
+          font-size: 2.125rem;
+          font-weight: 700;
+          color: white;
+          margin-bottom: 0.5em;
+          text-align: center;
+        }
+        &>h2 {
+          font-family: "raleway", "noto sans japanese";
+          font-size: 1rem;
+          color: white;
+          letter-spacing: 1px;
+          margin-bottom: 0.25em;
+        }
+      }
+      &:nth-child(5n+1) {
+        &>div {
+          background: hsl(30, 75%, 42.5%);
+        }
+      }
+      &:nth-child(5n+2) {
+        &>div {
+          background: hsl(102, 75%, 42.5%);
+        }
+      }
+      &:nth-child(5n+3) {
+        &>div {
+          background: hsl(174, 75%, 42.5%);
+        }
+      }
+      &:nth-child(5n+4) {
+        &>div {
+          background: hsl(246, 75%, 42.5%);
+        }
+      }
+      &:nth-child(5n+5) {
+        &>div {
+          background: hsl(318, 75%, 42.5%);
+        }
+      }
+    }
+  }
+}
+
+#contact {
+  ul {
+    width: 90%;
+    margin: auto;
+    padding: 0;
+    .v_centering;
+    li {
+      position: relative;
+      width: calc(80%/10);
+      margin: 0 calc(20%/20);
+      webicon {
+        width: 100%;
+        color: black;
+        transition: .125s color;
+      }
+      &:hover {
+        &.twitter {
+          webicon {
+            color: #55acee;
+          }
+        }
+        &.soundcloud {
+          webicon {
+            color: #ff8800;
+          }
+        }
+        &.envelope {
+          webicon {
+            color: #ffffff;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .list_sect {
+    &>ul {
+      li {
+        width: calc(100%/8);
+        &:nth-child(8n+1) {
+          &>div {
+            background: hsl(22, 75%, 42.5%);
+          }
+        }
+        &:nth-child(8n+2) {
+          &>div {
+            background: hsl(67, 75%, 42.5%);
+          }
+        }
+        &:nth-child(8n+3) {
+          &>div {
+            background: hsl(112, 75%, 42.5%);
+          }
+        }
+        &:nth-child(8n+4) {
+          &>div {
+            background: hsl(157, 75%, 42.5%);
+          }
+        }
+        &:nth-child(8n+5) {
+          &>div {
+            background: hsl(202, 75%, 42.5%);
+          }
+        }
+        &:nth-child(8n+6) {
+          &>div {
+            background: hsl(247, 75%, 42.5%);
+          }
+        }
+        &:nth-child(8n+7) {
+          &>div {
+            background: hsl(292, 75%, 42.5%);
+          }
+        }
+        &:nth-child(8n) {
+          &>div {
+            background: hsl(337, 75%, 42.5%);
+          }
+        }
+      }
+    }
+  }
+}

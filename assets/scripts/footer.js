@@ -13,7 +13,7 @@ $(function () {
         });
     $designed.append($("<a>", {
         text: "SnO2WMaN"
-        , href: "sno2wman.github.io"
+        , href: "//sno2wman.github.io"
     }));
     $footer.append($title, $copyright, $designed);
     $window.on("resize", function () {

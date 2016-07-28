@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Millennium Records</title>
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+  <script type="text/javascript" src="//cdn.rawgit.com/icons8/bower-webicon/v0.10.7/jquery-webicon.min.js"></script>
+  <script src="/assets/scripts/src2bg.js"></script>
+  <script src="/assets/scripts/jcanvas.min.js"></script>
+  <script src="https://d3js.org/d3.v4.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/trianglify/0.4.0/trianglify.min.js"></script>
+  <script src="https://d3js.org/d3.v4.min.js"></script>
+  <script src="/assets/scripts/footer.js"></script>
+  <script src="/assets/scripts/menu.js"></script>
+  <script src="/assets/scripts/bg.js"></script>
+  <script src="../albumFinder.js"></script>
+  <script src="../contactLinker.js"></script>
+  <script src="../profImage.js"></script>
+</head>
+
+<body data-name="Ex1s">
+  <nav id="menu"></nav>
+  <header>
+    <h1 id="artist_name"></h1>
+    <div class="v_centering">
+      <div class="texts">
+        <h1>INTRODUCTION</h1>
+        <h2>アーティスト紹介</h2>
+        <p>音ゲーを通じてDTMを知り、特にここ数年のJ-CORE、J-TRANCEに大きな影響を受けている。 </p>
+        <p>エモーショナルな曲調を目指しつつ楽曲制作に取り組んでいる。</p>
+      </div>
+      <div><img id="artist_img" /> </div>
+      <script>
+        $(function () {
+          var name = $("body").attr("data-name");
+          $("#artist_name").text(name);
+        });
+      </script>
+    </div>
+  </header>
+  <section id="albums" class="list_sect">
+    <h1>ALBUMS</h1>
+    <div>
+      <h2>発表したアルバム</h2> </div>
+    <ul></ul>
+  </section>
+  <section id="contact">
+    <h1>CONTACT</h1>
+    <div>
+      <h2>リンク</h2> </div>
+    <ul> </ul>
+  </section>
+  <footer></footer>
+</body>
+
+</html>

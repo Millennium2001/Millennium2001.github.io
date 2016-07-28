@@ -13,6 +13,9 @@ $(function () {
         title: "MEMBERS"
         , href: "/members/index.html"
     }, {
+        title: "JOIN"
+        , href: "/join.html"
+    }, {
         title: "CONTACT"
         , href: "/contact.html"
     }];

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Millennium Records</title>
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+  <script type="text/javascript" src="//cdn.rawgit.com/icons8/bower-webicon/v0.10.7/jquery-webicon.min.js"></script>
+  <script src="/assets/scripts/src2bg.js"></script>
+  <script src="/assets/scripts/jcanvas.min.js"></script>
+  <script src="https://d3js.org/d3.v4.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/trianglify/0.4.0/trianglify.min.js"></script>
+  <script src="https://d3js.org/d3.v4.min.js"></script>
+  <script src="/assets/scripts/footer.js"></script>
+  <script src="/assets/scripts/menu.js"></script>
+  <script src="/assets/scripts/bg.js"></script>
+  <script src="../albumFinder.js"></script>
+  <script src="../contactLinker.js"></script>
+  <script src="../profImage.js"></script>
+</head>
+
+<body data-name="A-Meal">
+  <nav id="menu"></nav>
+  <header>
+    <h1 id="artist_name"></h1>
+    <div class="v_centering">
+      <div class="texts">
+        <h1>INTRODUCTION</h1>
+        <h2>アーティスト紹介</h2>
+        <p>生年月日は1999年4月5日。</p>
+        <p>高校2年生。</p>
+        <p>使用DAWは"SONAR"。</p>
+        <p>シンセは主に"Massive"と"Sylenth1"を愛用しています。</p>
+        <p>ジャンルは音楽ゲーム向けのTranceやHard RenaissanceやDrumstepなどを得意としますが基本的に様々なジャンルに挑戦しています。</p>
+        <p>一応"太鼓の達人"の楽曲公募で一般投票枠で最終選考まで残った経歴も あります。</p>
+        <p>好きな料理は味噌ラーメンです。</p>
+        <p>よくスープの味を際立たせるために酢や胡椒やニンニクを入れて食べます。</p>
+        <p>よく入れ過ぎで自らの口をカオスにしたりもします。</p>
+        <p>"Twitter"では作曲実況CASを行い、下ネタや親フラで全フォロワーさんを色んな意味で圧倒させています。</p>
+        <p>とにかく性格は基地外です。</p>
+        <p>ジャンルの枠に捉われず、自分の世界観やストーリー性などを 大切にした曲作りをしていきたいです。</p>
+        <p>よろしくお願いします。</p>
+      </div>
+      <div><img id="artist_img" /> </div>
+      <script>
+        $(function () {
+          var name = $("body").attr("data-name");
+          $("#artist_name").text(name);
+        });
+      </script>
+    </div>
+  </header>
+  <section id="albums" class="list_sect">
+    <h1>ALBUMS</h1>
+    <div>
+      <h2>発表したアルバム</h2> </div>
+    <ul></ul>
+  </section>
+  <section id="contact">
+    <h1>CONTACT</h1>
+    <div>
+      <h2>リンク</h2> </div>
+    <ul> </ul>
+  </section>
+  <footer></footer>
+</body>
+
+</html>

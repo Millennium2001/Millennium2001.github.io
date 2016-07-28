@@ -2,74 +2,109 @@
 <html>
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Millennium Records</title>
-    <link rel="stylesheet" href="/assets/css/style.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
-    <script src="/assets/scripts/src2bg.js"></script>
-    <script src="/assets/scripts/jcanvas.min.js"></script>
-    <script src="https://d3js.org/d3.v4.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/trianglify/0.4.0/trianglify.min.js"></script>
-    <script src="https://d3js.org/d3.v4.min.js"></script>
-    <script src="/assets/scripts/footer.js"></script>
-    <script src="/assets/scripts/menu.js"></script>
-    <script src="/assets/scripts/bg.js"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Millennium Records</title>
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+  <script type="text/javascript" src="//cdn.rawgit.com/icons8/bower-webicon/v0.10.7/jquery-webicon.min.js"></script>
+  <script src="/assets/scripts/src2bg.js"></script>
+  <script src="/assets/scripts/jcanvas.min.js"></script>
+  <script src="https://d3js.org/d3.v4.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/trianglify/0.4.0/trianglify.min.js"></script>
+  <script src="https://d3js.org/d3.v4.min.js"></script>
+  <script src="/assets/scripts/footer.js"></script>
+  <script src="/assets/scripts/menu.js"></script>
+  <script src="/assets/scripts/bg.js"></script>
 </head>
 
 <body>
-    <div id="opening"> <img src="/assets/images/logo.png">
-        <h1>Millennium Records</h1> </div>
-    <nav id="menu"></nav>
-    <header>
-        <h1>Millennium Records</h1>
-        <div>
-            <h1>What's Millennium Records ?</h1>
-            <h2>Millennium Recordsとは</h2>
-            <p>2千年紀と3千年紀の境目、1999~2003年生まれのコンポーザーで結成されたレーベルです。</p>
-            <p>主宰NASHURI。</p>
-        </div>
-    </header>
-  -
-    <section id="albums" class="list_sect">
-        <h1>RECENTLY ALBUMS</h1>
-        <h2>All Albums Is <a href="/albums/index.html">Here</a>.</h2>
-        <ul></ul>
-        <script>
-            $(function () {
-                $.getJSON("/albums/albums.json", function (json) {
-                    var $list = $("#albums>ul");
-                    for (var i = 0; i < Math.min(json.length, 8); i++) {
-                        var album = json[json.length - 1 - i];
-                        var name = album.name
-                            , src = "/assets/images/albums/" + album.src + ".jpg"
-                            , link = "/albums/" + album.href + "/index.html";
-                        var $container = $("<li>");
-                        var $img = $("<img>", {
-                                src: src
-                            })
-                            , $flip = $("<div>")
-                            , $name = $("<h1>", {
-                                text: name
-                            })
-                            , $artist = $("<h2>", {
-                                text: album.artist
-                            })
-                            , $genre = $("<h2>", {
-                                text: album.genre
-                            })
-                            , $link = $("<a>", {
-                                href: link
-                                , class: "fill_link"
-                            });
-                        $container.append($img, $flip.append($name, $artist, $genre), $link);
-                        $list.append($container);
-                    }
-                });
-            });
-        </script>
-    </section>
-    <footer></footer>
+  <div id="opening"> <img src="/assets/images/logo.png">
+    <h1>Millennium Records</h1> </div>
+  <nav id="menu"></nav>
+  <header>
+    <h1>Millennium Records</h1>
+    <div>
+      <h1>What's Millennium Records?</h1>
+      <h2>Millennium Recordsとは</h2>
+      <p>2千年紀と3千年紀の境目、1999~2003年生まれのコンポーザーで結成されたレーベルです。</p>
+      <p>主宰NASHURI。</p>
+    </div>
+  </header>
+  <section id="members" class="list_sect">
+    <h1>MEMBERS</h1>
+    <div>
+      <h2>Millennium Recordsに所属しているメンバー</h2> </div>
+    <ul></ul>
+    <script>
+      $(function () {
+        $.getJSON("/members/members.json", function (json) {
+          var $list = $("#members>ul");
+          $.each(json, function (i, member) {
+            var name = member.name
+              , src = "/assets/images/members/" + member.path + ".jpg"
+              , link = "/members/" + member.path + "/index.html";
+            var $container = $("<li>");
+            var $img = $("<img>", {
+                src: src
+              })
+              , $flip = $("<div>")
+              , $name = $("<h1>", {
+                text: name
+              })
+              , $link = $("<a>", {
+                href: link
+                , class: "fill_link"
+              });
+            $container.append($img, $flip.append($name), $link);
+            $list.append($container);
+          });
+        });
+      });
+    </script>
+  </section>
+  <section id="albums" class="list_sect">
+    <h1>RECENTLY ALBUMS</h1>
+    <div>
+      <h2>最新のアルバム</h2>
+      <p>全アルバムは <a href="/albums/index.html">こちら</a>へどうぞ。</p>
+    </div>
+    <ul></ul>
+    <script>
+      $(function () {
+        $.getJSON("/albums/albums.json", function (json) {
+          var $list = $("#albums>ul");
+          for (var i = 0; i < Math.min(json.length, 8); i++) {
+            var album = json[json.length - 1 - i];
+            var name = album.name
+              , src = "/assets/images/albums/" + album.src + ".jpg"
+              , link = "/albums/" + album.href + "/index.html";
+            var $container = $("<li>");
+            var $img = $("<img>", {
+                src: src
+              })
+              , $flip = $("<div>")
+              , $name = $("<h1>", {
+                text: name
+              })
+              , $artist = $("<h2>", {
+                text: album.artist
+              })
+              , $genre = $("<h2>", {
+                text: album.genre
+              })
+              , $link = $("<a>", {
+                href: link
+                , class: "fill_link"
+              });
+            $container.append($img, $flip.append($name, $artist, $genre), $link);
+            $list.append($container);
+          }
+        });
+      });
+    </script>
+  </section>
+  <footer></footer>
 </body>
 
 </html>

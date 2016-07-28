@@ -2,54 +2,59 @@
 <html>
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Millennium Records</title>
-    <link rel="stylesheet" href="/assets/css/style.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
-    <script src="/assets/scripts/src2bg.js"></script>
-    <script src="/assets/scripts/jcanvas.min.js"></script>
-    <script src="https://d3js.org/d3.v4.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/trianglify/0.4.0/trianglify.min.js"></script>
-    <script src="https://d3js.org/d3.v4.min.js"></script>
-    <script src="/assets/scripts/footer.js"></script>
-    <script src="/assets/scripts/menu.js"></script>
-    <script src="/assets/scripts/bg.js"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Millennium Records</title>
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+  <script type="text/javascript" src="//cdn.rawgit.com/icons8/bower-webicon/v0.10.7/jquery-webicon.min.js"></script>
+  <script src="/assets/scripts/src2bg.js"></script>
+  <script src="/assets/scripts/jcanvas.min.js"></script>
+  <script src="https://d3js.org/d3.v4.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/trianglify/0.4.0/trianglify.min.js"></script>
+  <script src="https://d3js.org/d3.v4.min.js"></script>
+  <script src="/assets/scripts/footer.js"></script>
+  <script src="/assets/scripts/menu.js"></script>
+  <script src="/assets/scripts/bg.js"></script>
 </head>
 
 <body>
-    <nav id="menu"></nav>
-    <section id="members" class="list_sect">
-        <h1>MEMBERS</h1>
-        <ul></ul>
-        <script>
-            $(function () {
-                $.getJSON("/members/members.json", function (json) {
-                    var $list = $("#members>ul");
-                    $.each(json, function (i, member) {
-                        var name = member.name
-                            , src = "/assets/images/members/" + member.path + ".jpg"
-                            , link = "/members/" + member.path + "/index.html";
-                        var $container = $("<li>");
-                        var $img = $("<img>", {
-                                src: src
-                            })
-                            , $flip = $("<div>")
-                            , $name = $("<h1>", {
-                                text: name
-                            })
-                            , $link = $("<a>", {
-                                href: link
-                                , class: "fill_link"
-                            });
-                        $container.append($img, $flip.append($name), $link);
-                        $list.append($container);
-                    });
-                });
-            });
-        </script>
-    </section>
-    <footer></footer>
+  <nav id="menu"></nav>
+  <section id="members" class="list_sect">
+    <h1>MEMBERS</h1>
+    <div>
+      <h2>Millennium Recordsに所属しているメンバー</h2>
+      <p>クリックすると個別のページに飛びます。</p>
+    </div>
+    <ul></ul>
+    <script>
+      $(function () {
+        $.getJSON("/members/members.json", function (json) {
+          var $list = $("#members>ul");
+          $.each(json, function (i, member) {
+            var name = member.name
+              , src = "/assets/images/members/" + member.path + ".jpg"
+              , link = "/members/" + member.path + "/index.html";
+            var $container = $("<li>");
+            var $img = $("<img>", {
+                src: src
+              })
+              , $flip = $("<div>")
+              , $name = $("<h1>", {
+                text: name
+              })
+              , $link = $("<a>", {
+                href: link
+                , class: "fill_link"
+              });
+            $container.append($img, $flip.append($name), $link);
+            $list.append($container);
+          });
+        });
+      });
+    </script>
+  </section>
+  <footer></footer>
 </body>
 
 </html>

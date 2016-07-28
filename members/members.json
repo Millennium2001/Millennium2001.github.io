@@ -1,46 +1,106 @@
 [{
-    "name": "A-Meal"
-    , "path": "a_meal"
+  "name": "NASHURI"
+  , "path": "nashuri"
+  , "contact": {
+    "twitter": "//twitter.com/NASHURI_CORE"
+    , "soundcloud": "//soundcloud.com/hallmolegerm"
+  }
 }, {
-    "name": "Crossworld"
-    , "path": "crossworld"
+  "name": "えんのじょー"
+  , "path": "ennojo"
+  , "contact": {
+    "twitter": "//twitter.com/DTM_ENNOJO"
+    , "soundcloud": "//soundcloud.com/ted-ennojo"
+  }
 }, {
-    "name": "えんのじょー"
-    , "path": "ennojo"
+  "name": "LuVMachine"
+  , "path": "luvmachine"
+  , "contact": {
+    "twitter": "//twitter.com/LuVMachinez"
+    , "soundcloud": "//soundcloud.com/nifltraxion"
+  }
 }, {
-    "name": "Ex1s"
-    , "path": "ex1s"
+  "name": "Wam"
+  , "path": "wam"
+  , "contact": {
+    "twitter": "//twitter.com/Sobu209205201_T"
+    , "soundcloud": "//soundcloud.com/wam-a-k-a-07"
+  }
 }, {
-    "name": "KØTARO Ü"
-    , "path": "kotaro_u"
+  "name": "A-Meal"
+  , "path": "a_meal"
+  , "contact": {
+    "twitter": "//twitter.com/A_meal1931"
+    , "soundcloud": "//soundcloud.com/a-meal"
+  }
 }, {
-    "name": "LuVMachine"
-    , "path": "luvmachine"
+  "name": "Ex1s"
+  , "path": "ex1s"
+  , "contact": {
+    "twitter": "//twitter.com/_Ex1s"
+    , "soundcloud": "//soundcloud.com/ex1s"
+  }
 }, {
-    "name": "みそみぃる"
-    , "path": "misomyl"
+  "name": "ONOKORO"
+  , "path": "onokoro"
+  , "contact": {
+    "twitter": "//twitter.com/tohohonasaru"
+    , "soundcloud": "//soundcloud.com/onokorozima"
+  }
 }, {
-    "name": "NASHURI"
-    , "path": "nashuri"
+  "name": "SHRKs"
+  , "path": "shrks"
+  , "contact": {
+    "twitter": "//twitter.com/ShrksMusic"
+    , "soundcloud": "//soundcloud.com/shr-72357555"
+  }
 }, {
-    "name": "ONOKURO"
-    , "path": "onokoro"
+  "name": "KØTARO Ü"
+  , "path": "kotaro_u"
+  , "contact": {
+    "twitter": "//twitter.com/mojumoju0210"
+    , "soundcloud": "//soundcloud.com/e9ishamdiqeh"
+  }
 }, {
-    "name": "pepensow"
-    , "path": "pepensow"
+  "name": "tenya"
+  , "path": "tenya"
+  , "contact": {
+    "twitter": "//twitter.com/tenya_108"
+    , "soundcloud": "//soundcloud.com/user-52209064"
+  }
 }, {
-    "name": "quolet"
-    , "path": "quolet"
+  "name": "pepensow"
+  , "path": "pepensow"
+  , "contact": {
+    "twitter": "//twitter.com/pepensow"
+    , "soundcloud": "//soundcloud.com/pepensow"
+  }
 }, {
-    "name": "SHRKs"
-    , "path": "shrks"
+  "name": "quolet"
+  , "path": "quolet"
+  , "contact": {
+    "twitter": "//twitter.com/quolet_dtm"
+    , "soundcloud": "//soundcloud.com/quo_let"
+  }
 }, {
-    "name": "Srtin"
-    , "path": "srtin"
+  "name": "みそみぃる"
+  , "path": "misomyl"
+  , "contact": {
+    "twitter": "//twitter.com/MisomyL"
+    , "soundcloud": "//soundcloud.com/aou9qwfgxe4o"
+  }
 }, {
-    "name": "tenya"
-    , "path": "tenya"
+  "name": "Crossworld"
+  , "path": "crossworld"
+  , "contact": {
+    "twitter": "//twitter.com/CrossBest"
+    , "soundcloud": "//soundcloud.com/crossworld96"
+  }
 }, {
-    "name": "Wam"
-    , "path": "wam"
+  "name": "Srtin"
+  , "path": "srtin"
+  , "contact": {
+    "twitter": "//twitter.com/Srtin_music"
+    , "soundcloud": "//soundcloud.com/srtin"
+  }
 }]
