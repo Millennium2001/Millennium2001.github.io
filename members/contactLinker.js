@@ -1,5 +1,5 @@
 $(function () {
-  $.getJSON("/members/members.json", function (json) {
+  $.getJSON("//cdn.rawgit.com/SnO2WMaN/MillenniumRecords-Website/master/members/members.json", function (json) {
     var $list = $("#contact>ul");
     var artistName = $("body").attr("data-name");
     $.each(json, function (i, v) {
