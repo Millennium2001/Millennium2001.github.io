@@ -28,7 +28,7 @@
     <ul></ul>
     <script>
       $(function () {
-        $.getJSON("/albums/albums.json", function (json) {
+        $.getJSON("./albums.json", function (json) {
           var $list = $("#albums>ul");
           for (var i = 0; i < json.length; i++) {
             var album = json[json.length - 1 - i];

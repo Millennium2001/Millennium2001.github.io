@@ -29,7 +29,7 @@
     <ul></ul>
     <script>
       $(function () {
-        $.getJSON("/members/members.json", function (json) {
+        $.getJSON("./members.json", function (json) {
           var $list = $("#members>ul");
           $.each(json, function (i, member) {
             var name = member.name

@@ -72,7 +72,7 @@
     <ul></ul>
     <script>
       $(function () {
-        $.getJSON("/albums/albums.json", function (json) {
+        $.getJSON("./albums/albums.json", function (json) {
           var $list = $("#albums>ul");
           for (var i = 0; i < Math.min(json.length, 8); i++) {
             var album = json[json.length - 1 - i];
