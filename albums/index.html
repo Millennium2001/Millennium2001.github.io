@@ -5,17 +5,17 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Millennium Records</title>
-  <link rel="stylesheet" href="/assets/css/style.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+  <link rel="stylesheet" href="//cdn.rawgit.com/SnO2WMaN/MillenniumRecords-Website/master/assets/css/style.css">
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
   <script type="text/javascript" src="//cdn.rawgit.com/icons8/bower-webicon/v0.10.7/jquery-webicon.min.js"></script>
-  <script src="/assets/scripts/src2bg.js"></script>
-  <script src="/assets/scripts/jcanvas.min.js"></script>
-  <script src="https://d3js.org/d3.v4.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/trianglify/0.4.0/trianglify.min.js"></script>
-  <script src="https://d3js.org/d3.v4.min.js"></script>
-  <script src="/assets/scripts/footer.js"></script>
-  <script src="/assets/scripts/menu.js"></script>
-  <script src="/assets/scripts/bg.js"></script>
+  <script src="//cdn.rawgit.com/SnO2WMaN/src2bg/master/src2bg.min.js"></script>
+  <script src="//cdn.rawgit.com/SnO2WMaN/MillenniumRecords-Website/master/assets/scripts/jcanvas.min.js"></script>
+  <script src="//d3js.org/d3.v4.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/trianglify/0.4.0/trianglify.min.js"></script>
+  <script src="//d3js.org/d3.v4.min.js"></script>
+  <script src="//cdn.rawgit.com/SnO2WMaN/MillenniumRecords-Website/master/assets/scripts/menu.js"></script>
+  <script src="//cdn.rawgit.com/SnO2WMaN/MillenniumRecords-Website/master/assets/scripts/footer.js"></script>
+  <script src="//cdn.rawgit.com/SnO2WMaN/MillenniumRecords-Website/master/assets/scripts/bg.js"></script>
 </head>
 
 <body>
@@ -33,8 +33,8 @@
           for (var i = 0; i < json.length; i++) {
             var album = json[json.length - 1 - i];
             var name = album.name;
-            var src = "/assets/images/albums/" + album.src + ".jpg";
-            var link = "/albums/" + album.href + "/index.html";
+            var src = "//cdn.rawgit.com/SnO2WMaN/MillenniumRecords-Website/master/assets/images/albums/" + album.src + ".jpg";
+            var link = "./" + album.href + "/index.html";
             var $container = $("<li>");
             var $img = $("<img>", {
                 src: src

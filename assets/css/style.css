@@ -164,7 +164,7 @@ section {
 header > h1,
 section > h1 {
   font-size: 7.5rem;
-  font-family: "raleway";
+  font-family: "raleway", "noto sans japanese";
 }
 header > h2,
 section > h2 {
@@ -174,7 +174,7 @@ section > h2 {
 header > p,
 section > p {
   font-size: 2.5rem;
-  font-family: "noto sans japenese";
+  font-family: "noto sans japanese";
 }
 header div,
 section div {
