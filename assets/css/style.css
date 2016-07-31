@@ -349,7 +349,7 @@ footer.fix {
 #contact ul li:hover.soundcloud webicon {
   color: #ff8800;
 }
-#contact ul li:hover.envelope webicon {
+#contact ul li:hover.mail webicon {
   color: #ffffff;
 }
 @media screen and (min-width: 1200px) {

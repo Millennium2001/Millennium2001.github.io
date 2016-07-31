@@ -1,13 +1,7 @@
 [{
-    "name": "1st FreeComp"
-    , "src": "no_image"
-    , "href": "1st_freecomp"
-    , "genre": "Trance"
-    , "artist": "Millennium Records"
-}, {
-    "name": "Extremely Distorted Tunes Vol.1"
-    , "src": "extremely_distorted_tunes_vol_1"
-    , "href": "extremely_distorted_tunes_vol_1"
-    , "genre": "Hardcore & etc."
-    , "artist": "NASHURI & etc."
+  "name": "Extremely Distorted Tunes Vol.1"
+  , "src": "extremely_distorted_tunes_vol_1"
+  , "href": "extremely_distorted_tunes_vol_1"
+  , "genre": "Hardcore & etc."
+  , "artist": "NASHURI & etc."
 }]
